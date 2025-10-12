@@ -3,30 +3,91 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shortform Content Voor Ondernemers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meer proeflessen met shortform video + boekingspagina | ShinFilmT</title>
+    <meta name="description"
+        content="Ik maak shortform video's + een converterende landingspagina die proeflessen oplevert voor rijscholen. Binnen 72 uur live. Maandelijks opzegbaar." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Meer proeflessen met shortform video + boekingspagina" />
+    <meta property="og:description" content="Shortform + boekingsflow voor rijscholen. Binnen 72 uur live." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shinfilmt.nl" />
+    <meta property="og:image" content="https://shinfilmt.nl/og-cover.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Meer proeflessen met shortform video + boekingspagina" />
+    <meta name="twitter:description" content="Shortform + boekingsflow voor rijscholen. Binnen 72 uur live." />
+    <meta name="twitter:image" content="https://shinfilmt.nl/og-cover.jpg" />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon"
-        href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='0.9em' font-size='90'&gt;📹&lt;/text&gt;&lt;/svg&gt;">
-    <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <link rel="icon" href="/favicon.svg" />
+
     <style>
-        /* nice focus ring for keyboard users */
         .focus-ring:focus-visible {
             outline: none;
             box-shadow: 0 0 0 3px rgba(250, 204, 21, .6);
         }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            [data-animate],
+            [data-animate="float"] {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
     </style>
+
+    <!-- JSON-LD (Service, ik-vorm via description) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Shortform video + boekingsflow voor rijscholen",
+    "provider": { "@type": "Organization", "name": "ShinFilmT", "url": "https://shinfilmt.nl" },
+    "areaServed": "NL",
+    "offers": { "@type": "Offer", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
+    "url": "https://shinfilmt.nl",
+    "description": "Ik maak shortform video's en een landingspagina die proeflessen oplevert."
+  }
+  </script>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 
 <body class="bg-black text-white font-sans antialiased selection:bg-yellow-400/20">
+
+    <!-- Top nav -->
+    <header class="fixed top-0 inset-x-0 z-40 backdrop-blur bg-black/40 border-b border-white/10">
+        <nav class="max-w-5xl mx-auto flex items-center justify-between px-4 h-14">
+            <a href="#" class="font-semibold text-white">ShinFilmT</a>
+            <div class="hidden sm:flex gap-6 text-sm text-neutral-300">
+                <a href="#hoe" class="hover:text-white">Hoe ik werk</a>
+                <a href="#prijzen" class="hover:text-white">Prijzen</a>
+                <a href="#roi" class="hover:text-white">ROI</a>
+                <a href="#boek" class="hover:text-white">Boeken</a>
+            </div>
+            <a href="#boek"
+                class="focus-ring hidden sm:inline-block text-sm bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold">Plan
+                kennismaking</a>
+        </nav>
+    </header>
+
+    <!-- Mobile sticky CTA -->
+    <a href="#boek"
+        class="sm:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-yellow-400 text-black px-5 py-3 rounded-full font-semibold shadow-lg focus-ring">
+        Plan kennismaking
+    </a>
+
     <!-- Hero -->
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
         <div class="absolute inset-0 -z-10" aria-hidden="true">
             <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-yellow-400/30 via-pink-500/10 to-black"
                 id="hero-grad"></div>
-            <!-- subtle grid -->
             <div
                 class="absolute inset-0 [background-image:linear-gradient(90deg,rgba(255,255,255,.06)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,.06)_1px,transparent_1px)] [background-size:40px_40px] opacity-20">
             </div>
@@ -45,89 +106,110 @@
 
         <p class="text-lg md:text-xl max-w-sm md:max-w-md text-neutral-300 mb-6 leading-snug" data-animate="fade-up"
             data-delay="0.12">
-            Shortform video’s + landingspagina die nieuwe leerlingen opleveren.
+            Ik combineer shortform video’s met een landingspagina → <span class="font-semibold text-white">meer
+                proeflessen binnen 72 uur</span>.
         </p>
 
         <div class="flex gap-3 flex-wrap justify-center" data-animate="fade-up" data-delay="0.16">
+            <a href="#prijzen"
+                class="focus-ring border border-yellow-400 text-yellow-400 font-semibold py-3 px-6 rounded-full hover:bg-yellow-400/10 will-change-transform hover:-translate-y-0.5">
+                Bekijk prijzen
+            </a>
             <a href="https://cal.com/shinfilmt" target="_blank" rel="noopener"
-                class="focus-ring border border-yellow-400 text-yellow-400 font-semibold py-3 px-6 rounded-full hover:bg-yellow-400/10  will-change-transform hover:-translate-y-0.5">
-                Plan een kennismaking
+                class="focus-ring border border-white/20 text-white font-semibold py-3 px-6 rounded-full hover:bg-white/10 will-change-transform hover:-translate-y-0.5"
+                aria-label="Plan een kennismaking via Cal.com">
+                Plan kennismaking
             </a>
         </div>
     </section>
 
-    <!-- Wat je krijgt -->
-    <section class="py-20 px-6 bg-neutral-950 border-t border-neutral-800">
-        <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-8" data-animate="fade-up">Wat je krijgt</h2>
-            <div class="grid gap-4 text-left" data-animate="stagger">
-                <!-- Strategie -->
+    <!-- Hoe ik werk -->
+    <section id="hoe" class="py-16 px-6 bg-black border-t border-neutral-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8" data-animate="fade-up">Hoe ik werk</h2>
+            <div class="grid md:grid-cols-3 gap-4 text-left" data-animate="stagger">
                 <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
-                    <h3 class="font-semibold text-white mb-2">🎯 Strategie</h3>
-                    <p class="text-neutral-400 text-sm">Geen standaard video’s. We starten met een intake zodat ik
-                        precies begrijp hoe jouw rijschool nieuwe leerlingen aantrekt. Jouw verhaal wordt vertaald naar
-                        content die leerlingen direct aanspreekt.</p>
+                    <h3 class="font-semibold mb-1">1) Film</h3>
+                    <p class="text-neutral-400 text-sm">We plannen 60 min opname of ik gebruik bestaand materiaal.</p>
                 </div>
-                <!-- Scripts & hooks -->
                 <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
-                    <h3 class="font-semibold text-white mb-2">✍️ Scripts & hooks</h3>
-                    <p class="text-neutral-400 text-sm">Korte, pakkende hooks die niet alleen aandacht trekken maar ook
-                        aanzetten tot het boeken van een proefles. Gebaseerd op jouw input, maar altijd met een
-                        commerciële scherpte.</p>
+                    <h3 class="font-semibold mb-1">2) Funnel</h3>
+                    <p class="text-neutral-400 text-sm">Ik bouw de landingspagina en de boekingsflow (Cal/Google).</p>
                 </div>
-                <!-- Edit & captions -->
                 <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
-                    <h3 class="font-semibold text-white mb-2">🎬 Edit & captions</h3>
-                    <p class="text-neutral-400 text-sm">Professioneel gemonteerde Reels en TikToks met captions,
-                        effecten en tempo dat blijft hangen. Klaar voor Instagram en TikTok, zonder dat jij zelf nog
-                        hoeft te editen.</p>
-                </div>
-                <!-- Klaar om te posten -->
-                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
-                    <h3 class="font-semibold text-white mb-2">🚀 Klaar om te posten</h3>
-                    <p class="text-neutral-400 text-sm">Je ontvangt alles kant-en-klaar, direct geschikt om te posten.
-                        Ideaal als je weinig tijd hebt naast het geven van rijlessen.</p>
-                </div>
-                <!-- Landingspagina -->
-                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
-                    <h3 class="font-semibold text-white mb-2">🧭 Converterende landingspagina</h3>
-                    <p class="text-neutral-400 text-sm">Een simpele 1-pager met maar één doel: leerlingen overtuigen en
-                        direct een proefles laten boeken. Geen afleiding, alleen resultaat. Net zo mooi als deze natuurlijk!</p>
-                </div>
-                <!-- Boekingsflow -->
-                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
-                    <h3 class="font-semibold text-white mb-2">📅 Boekingsflow</h3>
-                    <p class="text-neutral-400 text-sm">Leerlingen plannen hun proefles rechtstreeks in jouw agenda.
-                        Inclusief automatische reminders en de optie om te verzetten. Minder heen-en-weer bellen, meer
-                        afspraken.</p>
+                    <h3 class="font-semibold mb-1">3) Boekingen</h3>
+                    <p class="text-neutral-400 text-sm">Leads boeken rechtstreeks in jouw agenda. Jij geeft les, ik meet
+                        en stuur bij.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-black border-t border-neutral-800">
+    <!-- Wat je krijgt -->
+    <section id="wat" class="py-20 px-6 bg-neutral-950 border-t border-neutral-800">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8" data-animate="fade-up">Wat je krijgt</h2>
+            <div class="grid gap-4 text-left" data-animate="stagger">
+                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
+                    <h3 class="font-semibold text-white mb-2">🎯 Strategie</h3>
+                    <p class="text-neutral-400 text-sm">Geen standaard video’s. Ik start met een intake en vertaal jouw
+                        verhaal naar content die leerlingen aanspreekt.</p>
+                </div>
+                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
+                    <h3 class="font-semibold text-white mb-2">✍️ Scripts & hooks</h3>
+                    <p class="text-neutral-400 text-sm">Korte, pakkende hooks die aanzetten tot het boeken van een
+                        proefles.</p>
+                </div>
+                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
+                    <h3 class="font-semibold text-white mb-2">🎬 Edit & captions</h3>
+                    <p class="text-neutral-400 text-sm">Professionele Reels/TikToks met captions, effecten en tempo dat
+                        blijft hangen.</p>
+                </div>
+                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
+                    <h3 class="font-semibold text-white mb-2">🚀 Klaar om te posten</h3>
+                    <p class="text-neutral-400 text-sm">Je ontvangt alles kant-en-klaar, direct geschikt om te posten.
+                    </p>
+                </div>
+                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
+                    <h3 class="font-semibold text-white mb-2">🧭 Converterende landingspagina</h3>
+                    <p class="text-neutral-400 text-sm">Een 1-pager met één doel: overtuigen en proefles laten boeken.
+                    </p>
+                </div>
+                <div class="bg-neutral-900 p-4 rounded-lg border border-neutral-700">
+                    <h3 class="font-semibold text-white mb-2">📅 Boekingsflow</h3>
+                    <p class="text-neutral-400 text-sm">Afspraak direct in <span class="font-medium text-white">jouw
+                            agenda</span> + reminders. Minder heen-en-weer, meer afspraken.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="prijzen" class="py-24 px-6 bg-black border-t border-neutral-800">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-semibold mb-3" data-animate="fade-up">Boeking-machine voor rijscholen</h2>
-            <p class="text-neutral-300" data-animate="fade-up" data-delay="0.06">Shortform video’s + een converterende
-                landingspagina. Binnen 72 uur live.</p>
+            <p class="text-neutral-300" data-animate="fade-up" data-delay="0.06">Shortform + landingspagina. Binnen 72
+                uur live.</p>
             <p class="text-neutral-300 mb-8" data-animate="fade-up" data-delay="0.12">Maandelijks opzegbaar.</p>
 
             <!-- Welkomstdeal -->
             <div class="mb-10 bg-neutral-900 rounded-xl border border-yellow-400/60 p-5 text-left"
                 data-animate="fade-up" data-delay="0.18">
-                <p class="text-yellow-400 font-semibold">Welkomstdeal:</p>
-                <p class="text-neutral-200 mt-2">Start laagdrempelig: <span class="font-semibold">eerste maand 50%
-                        korting</span> op het maandbedrag + <span class="font-semibold">de eerste 3 proeflessen zonder
-                        fee</span>. Zo ervaar je direct wat dit oplevert.</p>
+                <p class="text-yellow-400 font-semibold">Welkomstdeal</p>
+                <p class="text-neutral-200 mt-2">Eerste maand <span class="font-semibold">50% korting</span> op het
+                    maandbedrag + <span class="font-semibold">de eerste 3 leads gratis</span>. Zo ervaar je direct het
+                    resultaat.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 text-black" data-animate="stagger">
                 <!-- Instap -->
                 <div
-                    class="bg-white rounded-xl p-6 text-center flex flex-col hover:-translate-y-1 hover:shadow-2xl  will-change-transform">
+                    class="bg-white rounded-xl p-6 text-center flex flex-col hover:-translate-y-1 hover:shadow-2xl will-change-transform">
                     <h3 class="text-xl font-bold mb-1">Instap</h3>
                     <p class="text-3xl font-extrabold mb-1">€295<span class="text-base font-semibold">/mnd</span></p>
-                    <p class="text-sm text-neutral-600 mb-4">+ €85 per geboekte proefles</p>
+                    <p class="text-sm text-neutral-600 mb-2">+ €85 per lead</p>
+                    <p class="text-xs text-neutral-500 mb-4">Lead = geboekte proefles in jouw ‘Bookings’-agenda.
+                        Dubbelen/no-shows uitgefilterd. Optionele cap beschikbaar.</p>
                     <span
                         class="inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4">Maandelijks
                         opzegbaar</span>
@@ -140,13 +222,15 @@
                         class="focus-ring mt-auto border border-black/40 text-black font-semibold py-2 px-4 rounded-full hover:bg-black/5">Plan
                         kennismaking</a>
                 </div>
+
                 <!-- Standaard -->
                 <div
-                    class="bg-white rounded-xl p-6 text-center border-2 border-yellow-400 flex flex-col relative hover:-translate-y-1 hover:shadow-2xl  will-change-transform">
-                   
+                    class="bg-white rounded-xl p-6 text-center border-2 border-yellow-400 flex flex-col relative hover:-translate-y-1 hover:shadow-2xl will-change-transform">
                     <h3 class="text-xl font-bold mb-1">Standaard</h3>
                     <p class="text-3xl font-extrabold mb-1">€495<span class="text-base font-semibold">/mnd</span></p>
-                    <p class="text-sm text-neutral-600 mb-4">+ €65 per geboekte proefles</p>
+                    <p class="text-sm text-neutral-600 mb-2">+ €65 per lead</p>
+                    <p class="text-xs text-neutral-500 mb-4">Lead = geboekte proefles in jouw ‘Bookings’-agenda.
+                        Dubbelen/no-shows uitgefilterd. Optionele cap beschikbaar.</p>
                     <span
                         class="inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4">Maandelijks
                         opzegbaar</span>
@@ -159,12 +243,15 @@
                         class="focus-ring mt-auto bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full hover:ring-2 hover:ring-yellow-300">Plan
                         kennismaking</a>
                 </div>
+
                 <!-- Groei -->
                 <div
-                    class="bg-white rounded-xl p-6 text-center flex flex-col hover:-translate-y-1 hover:shadow-2xl  will-change-transform">
+                    class="bg-white rounded-xl p-6 text-center flex flex-col hover:-translate-y-1 hover:shadow-2xl will-change-transform">
                     <h3 class="text-xl font-bold mb-1">Groei</h3>
                     <p class="text-3xl font-extrabold mb-1">€895<span class="text-base font-semibold">/mnd</span></p>
-                    <p class="text-sm text-neutral-600 mb-4">+ €55 per geboekte proefles</p>
+                    <p class="text-sm text-neutral-600 mb-2">+ €55 per lead</p>
+                    <p class="text-xs text-neutral-500 mb-4">Lead = geboekte proefles in jouw ‘Bookings’-agenda.
+                        Dubbelen/no-shows uitgefilterd. Optionele cap beschikbaar.</p>
                     <span
                         class="inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4">Maandelijks
                         opzegbaar</span>
@@ -180,46 +267,66 @@
                 </div>
             </div>
 
+            <!-- ROI Quick Calc -->
+            <div id="roi"
+                class="mt-10 max-w-2xl mx-auto bg-neutral-900 p-5 rounded-lg border border-neutral-700 text-left">
+                <h3 class="text-xl font-semibold mb-3">Verdienmodel-calculator</h3>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <label class="block text-sm">
+                        <span class="text-neutral-300">Marge per les (€)</span>
+                        <input id="roi-marge" type="number" value="40"
+                            class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-neutral-300">Lessen per leerling</span>
+                        <input id="roi-lessen" type="number" value="35"
+                            class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-neutral-300">Leads/maand</span>
+                        <input id="roi-leads" type="number" value="10"
+                            class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
+                    </label>
+                </div>
+                <p class="text-sm text-neutral-400 mt-3">Ik reken 1 geboekte proefles = 1 lead. Dubbelen/no-shows niet
+                    billable.</p>
+                <div class="mt-4 p-4 rounded bg-black border border-neutral-700">
+                    <p class="text-neutral-300">Waarde per leerling: <span id="roi-per"
+                            class="text-yellow-400 font-bold">€0</span></p>
+                    <p class="text-neutral-300">Geschatte maandwaarde: <span id="roi-maand"
+                            class="text-yellow-400 font-bold">€0</span></p>
+                    <p class="text-neutral-400 text-sm mt-1">= (<span id="roi-per-mini">€0</span> × <span
+                            id="roi-leads-mini">0</span>)</p>
+                </div>
+                <p id="roi-break" class="mt-3 text-green-400 font-semibold"></p>
+            </div>
+
             <p class="text-neutral-400 text-sm mt-8 max-w-2xl mx-auto" data-animate="fade-up" data-delay="0.12">
-                Resultaten verschillen per regio en doelgroep. Het principe is simpel: <span
-                    class="text-white font-medium">meer relevante content → meer bereik → meer
-                    proefles-aanvragen</span>. Reken jouw opbrengst per leerling uit in de calculator hieronder.
+                Resultaten verschillen per regio en doelgroep. Het principe is simpel:
+                <span class="text-white font-medium">meer relevante content → meer bereik → meer
+                    proefles-aanvragen</span>.
             </p>
         </div>
     </section>
 
-    <!-- Winstcalculator (Per leerling) -->
-    <section class="py-24 px-6 bg-neutral-950 border-t border-neutral-800">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-6" data-animate="fade-up">Wat is één nieuwe leerling waard?</h2>
-            <p class="text-neutral-400 mb-10" data-animate="fade-up" data-delay="0.06">Vul jouw cijfers in en ontdek wat
-                één extra leerling oplevert. Onthoud: meer content = vaak meer views = meer leerlingen.
-            </p>
-
-            <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700 text-left" data-animate="fade-up"
-                data-delay="0.12">
-                <label for="marge" class="block text-neutral-300 mb-2 font-semibold">Gemiddelde marge per les
-                    (€)</label>
-                <input id="marge" type="number" value="40"
-                    class="focus-ring w-full p-3 rounded bg-black text-white border border-neutral-700 focus:ring-2 focus:ring-yellow-400 outline-none mb-6">
-
-                <label for="lessen" class="block text-neutral-300 mb-2 font-semibold">Gemiddeld aantal lessen per
-                    leerling</label>
-                <input id="lessen" type="number" value="35"
-                    class="focus-ring w-full p-3 rounded bg-black text-white border border-neutral-700 focus:ring-2 focus:ring-yellow-400 outline-none mb-6">
-
-                <div class="p-4 rounded-lg bg-black border border-neutral-700 mt-4">
-                    <h3 class="text-xl font-bold text-white mb-2">Waarde per leerling</h3>
-                    <p class="text-yellow-400 font-bold text-lg" id="leerling-result">≈ €0</p>
-                </div>
-            </div>
-
-            <p class="text-neutral-500 text-sm mt-6" data-animate="fade-up" data-delay="0.06">Meer video’s = meer bereik
-                = grotere kans op extra leerlingen. Dit bedrag is dus de basis per leerling die je via shortform &
-                landingspagina binnenhaalt.
-            <br>
-        </br>
-        Data ingevoerd in de calculator slaan we <span class="underline">niet</span> op</p>
+    <!-- FAQ -->
+    <section id="faq" class="max-w-3xl mx-auto px-6 pb-10">
+        <h3 class="text-2xl font-semibold mb-4 text-center">Veelgestelde vragen</h3>
+        <div class="space-y-4">
+            <details class="bg-neutral-900 rounded-lg border border-neutral-700 p-4">
+                <summary class="cursor-pointer font-semibold">Hoe meet je een ‘lead’?</summary>
+                <p class="text-neutral-300 mt-2 text-sm">Een geboekte proefles in jouw ‘Bookings’-agenda (Google/Cal).
+                    Dubbelen (zelfde nummer binnen 30 dagen) en no-shows tel ik niet mee.</p>
+            </details>
+            <details class="bg-neutral-900 rounded-lg border border-neutral-700 p-4">
+                <summary class="cursor-pointer font-semibold">Wat als iemand annuleert?</summary>
+                <p class="text-neutral-300 mt-2 text-sm">Annuleringen zonder nieuwe afspraak binnen 7 dagen zijn niet
+                    billable.</p>
+            </details>
+            <details class="bg-neutral-900 rounded-lg border border-neutral-700 p-4">
+                <summary class="cursor-pointer font-semibold">Kan ik maandelijks stoppen?</summary>
+                <p class="text-neutral-300 mt-2 text-sm">Ja. Maandelijks opzegbaar. Geen verborgen kosten.</p>
+            </details>
         </div>
     </section>
 
@@ -227,11 +334,12 @@
     <section class="py-24 px-6 bg-neutral-950 border-t border-neutral-800">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-semibold mb-6" data-animate="fade-up">Waarom ik?</h2>
-            <p class="text-neutral-400 text-lg" data-animate="fade-up" data-delay="0.06">Met mijn eigen fitnesscontent
-                heb ik meer dan <strong class="text-yellow-400">5 miljoen</strong> views behaald. Dat was geen toeval:
-                door te testen, analyseren en steeds te verbeteren weet ik precies wat werkt om kijkers te bereiken en
-                in actie te laten komen. Diezelfde strategie pas ik nu toe voor ondernemers in andere sectoren zoals
-                rijscholen, om meer klanten en afspraken te genereren met shortform video’s.</p>
+            <p class="text-neutral-400 text-lg" data-animate="fade-up" data-delay="0.06">
+                Met mijn eigen fitnesscontent haalde ik <strong class="text-yellow-400">5+ miljoen</strong> views.
+                Door te testen, analyseren en verbeteren weet ik wat werkt om kijkers in actie te krijgen.
+                Diezelfde strategie pas ik toe voor rijscholen — gericht op <span class="text-white font-medium">meer
+                    proeflessen</span>.
+            </p>
         </div>
     </section>
 
@@ -239,11 +347,13 @@
     <section id="boek" class="bg-white text-black py-24 px-6 border-t border-neutral-200">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4" data-animate="fade-up">Plan direct je kennismaking</h2>
-            <p class="text-neutral-600 mb-6" data-animate="fade-up" data-delay="0.06">Open de planner en kies
-                je tijdslot.</p>
+            <p class="text-neutral-600 mb-6" data-animate="fade-up" data-delay="0.06">Open de planner en kies je
+                tijdslot.</p>
             <a href="https://cal.com/shinfilmt" target="_blank" rel="noopener"
-                class="focus-ring inline-block bg-black text-white py-3 px-6 rounded-full font-semibold hover:ring-2 hover:ring-neutral-700  will-change-transform hover:-translate-y-0.5"
-                data-animate="fade-up" data-delay="0.12">Open de planner</a>
+                class="focus-ring inline-block bg-black text-white py-3 px-6 rounded-full font-semibold hover:ring-2 hover:ring-neutral-700 will-change-transform hover:-translate-y-0.5"
+                data-animate="fade-up" data-delay="0.12" aria-label="Open de planner op Cal.com">
+                Open de planner
+            </a>
         </div>
     </section>
 
@@ -254,66 +364,81 @@
 
     <script>
         window.addEventListener('load', () => {
-            const { gsap } = window;
-            if (!gsap) return;
-            gsap.registerPlugin(ScrollTrigger);
+            const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // Hero gradient slow drift
-            gsap.to('#hero-grad', { scale: 1.05, rotate: 2, transformOrigin: '50% 50%', duration: 12, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-
-            // Fade-up on scroll
-            document.querySelectorAll('[data-animate="fade-up"]').forEach((el) => {
-                gsap.from(el, {
-                    y: 20,
-                    opacity: 0,
-                    duration: .7,
-                    ease: 'power3.out',
-                    delay: parseFloat(el.dataset.delay || '0'),
-                    scrollTrigger: { trigger: el, start: 'top 85%' }
-                });
-            });
-
-            // Float elements (hero avatar)
-            document.querySelectorAll('[data-animate="float"]').forEach((el) => {
-                gsap.to(el, { y: -6, duration: 2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
-            });
-
-            // Stagger children in wrappers
-            document.querySelectorAll('[data-animate="stagger"]').forEach((wrap) => {
-                const items = wrap.children;
-                gsap.from(items, {
-                    opacity: 0,
-                    y: 14,
-                    duration: .5,
-                    ease: 'power2.out',
-                    stagger: .06,
-                    scrollTrigger: { trigger: wrap, start: 'top 85%' }
-                });
-            });
-
-            // Views counter (5,000,000 → animated)
-            const counter = { val: 0 };
-            const target = 5000000;
-            gsap.to(counter, {
-                val: target,
-                duration: 2,
-                ease: 'power2.out',
-                onUpdate: () => {
-                    const el = document.getElementById('view-counter');
-                    if (el) el.textContent = Math.floor(counter.val).toLocaleString('nl-NL');
+            // Views counter (van 0 → 5.000.000)
+            const counter = { val: 0 }, target = 5000000;
+            const vcEl = document.getElementById('view-counter');
+            if (vcEl) {
+                const duration = reduce ? 0 : 2000;
+                const start = performance.now();
+                function step(t) {
+                    const p = Math.min(1, (t - start) / duration);
+                    const val = Math.floor(target * p);
+                    vcEl.textContent = val.toLocaleString('nl-NL');
+                    if (p < 1) requestAnimationFrame(step);
                 }
-            });
-
-            // Calculator logic
-            function berekenLeerlingWaarde() {
-                const marge = parseFloat(document.getElementById('marge').value) || 0;
-                const lessen = parseFloat(document.getElementById('lessen').value) || 0;
-                const waardeLeerling = marge * lessen;
-                document.getElementById('leerling-result').textContent = `≈ €${waardeLeerling.toLocaleString('nl-NL')}`;
+                requestAnimationFrame(step);
             }
-            document.getElementById('marge').addEventListener('input', berekenLeerlingWaarde);
-            document.getElementById('lessen').addEventListener('input', berekenLeerlingWaarde);
-            berekenLeerlingWaarde();
+
+            // ROI calc
+            function roiUpdate() {
+                const g = id => document.getElementById(id);
+                const m = +g('roi-marge')?.value || 0;
+                const l = +g('roi-lessen')?.value || 0;
+                const leads = +g('roi-leads')?.value || 0;
+                const per = m * l;
+                const maand = per * leads;
+                const plan = 495; // Standaard-plan als referentie
+                const breakeven = per > 0 ? Math.max(1, Math.ceil(plan / per)) : 0;
+
+                const set = (id, val) => { const el = g(id); if (el) el.textContent = val; };
+                set('roi-per', '€' + per.toLocaleString('nl-NL'));
+                set('roi-maand', '€' + maand.toLocaleString('nl-NL'));
+                set('roi-per-mini', '€' + per.toLocaleString('nl-NL'));
+                set('roi-leads-mini', leads);
+                const br = g('roi-break');
+                if (br) br.textContent = per > 0 ? `Break-even: ~${breakeven} leerling(en)/mnd voor het Standaard-plan.` : '';
+            }
+            ['roi-marge', 'roi-lessen', 'roi-leads'].forEach(id => {
+                const el = document.getElementById(id); if (el) el.addEventListener('input', roiUpdate);
+            });
+            roiUpdate();
+
+            // Motion (GSAP) alleen als geen reduced motion
+            if (!reduce && window.gsap) {
+                const { gsap } = window;
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.to('#hero-grad', { scale: 1.05, rotate: 2, transformOrigin: '50% 50%', duration: 12, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+
+                document.querySelectorAll('[data-animate="fade-up"]').forEach((el) => {
+                    gsap.from(el, {
+                        y: 20,
+                        opacity: 0,
+                        duration: .7,
+                        ease: 'power3.out',
+                        delay: parseFloat(el.dataset.delay || '0'),
+                        scrollTrigger: { trigger: el, start: 'top 85%' }
+                    });
+                });
+
+                document.querySelectorAll('[data-animate="float"]').forEach((el) => {
+                    gsap.to(el, { y: -6, duration: 2, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+                });
+
+                document.querySelectorAll('[data-animate="stagger"]').forEach((wrap) => {
+                    const items = wrap.children;
+                    gsap.from(items, {
+                        opacity: 0,
+                        y: 14,
+                        duration: .5,
+                        ease: 'power2.out',
+                        stagger: .06,
+                        scrollTrigger: { trigger: wrap, start: 'top 85%' }
+                    });
+                });
+            }
         });
     </script>
 </body>
