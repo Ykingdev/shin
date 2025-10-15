@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meer proeflessen met shortform video + boekingspagina | ShinFilmT</title>
+    <title>Meer proeflessen met shortform video + boekingspagina | shinfilmt</title>
     <meta name="description"
         content="Ik maak shortform video's + een converterende landingspagina die proeflessen oplevert voor rijscholen. Binnen 72 uur live. Maandelijks opzegbaar." />
 
@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="Shortform + boekingsflow voor rijscholen. Binnen 72 uur live." />
     <meta name="twitter:image" content="https://shinfilmt.nl/og-cover.jpg" />
 
-<link rel="stylesheet" href="./dist/assets/tailwind.css">
+    <link rel="stylesheet" href="./dist/assets/tailwind.css">
     <link rel="icon" href="/favicon.svg" />
 
     <style>
@@ -38,6 +38,18 @@
                 transition: none !important;
             }
         }
+
+.u-underline{
+  text-decoration: none;                           /* text stays neutral */
+  background-image: linear-gradient(#f59e0b, #f59e0b); /* amber-500-ish line */
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;                         /* start hidden */
+}
+@media (prefers-reduced-motion: reduce){
+  .u-underline{ background-size: 100% 2px !important; }
+}
+
     </style>
 
     <!-- JSON-LD (Service, ik-vorm via description) -->
@@ -64,7 +76,7 @@
     <!-- Top nav -->
     <header class="fixed top-0 inset-x-0 z-40 backdrop-blur bg-black/40 border-b border-white/10">
         <nav class="max-w-5xl mx-auto flex items-center justify-between px-4 h-14">
-            <a href="#" class="font-semibold text-white">ShinFilmT</a>
+            <a href="#" class="font-semibold text-white">ShinFilmt</a>
             <div class="hidden sm:flex gap-6 text-sm text-neutral-300">
                 <a href="#hoe" class="hover:text-white">Hoe ik werk</a>
                 <a href="#prijzen" class="hover:text-white">Prijzen</a>
@@ -105,17 +117,19 @@
 
         <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4 bg-gradient-to-br from-yellow-400 to-neutral-200 bg-clip-text text-transparent leading-tight"
             data-animate="fade-up">
-            <span class="block">Video’s die afspraken opleveren.</span>
+            <span class="block">Video’s die leerlingen opleveren.</span>
         </h1>
 
         <p class="text-yellow-400 text-sm md:text-base mb-2" data-animate="fade-up" data-delay="0.08">+<span
                 id="view-counter">5.000.000</span> weergaven op mijn eigen content</p>
 
-        <p class="text-lg md:text-xl max-w-sm md:max-w-md text-neutral-300 mb-6 leading-snug" data-animate="fade-up"
-            data-delay="0.12">
-            <span class="font-semibold text-white">Meer proeflessen binnen 72 uur</span> met shortform video’s en een
-            converterende landingspagina.
+        <p class="text-lg md:text-xl font-semibold max-w-sm md:max-w-md text-neutral-300 mb-6 leading-snug"
+            data-animate="fade-up" data-delay="0.12">
+            Meer proeflessen
+            <span class="u-underline">binnen 72 uur</span>
+            voor jouw rijschool met shortform video’s en een converterende landingspagina.
         </p>
+
 
         <div class="flex gap-3 flex-wrap justify-center" data-animate="fade-up" data-delay="0.16">
             <a href="#prijzen"
@@ -254,211 +268,133 @@
         </div>
     </section>
 
-    <!-- Pricing -->
     <section id="prijzen" class="py-24 px-6 bg-black border-t border-neutral-800">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-3" data-animate="fade-up">Boeking-machine voor rijscholen</h2>
-            <p class="text-neutral-300" data-animate="fade-up" data-delay="0.06">Shortform + landingspagina. Binnen 72
-                uur live.</p>
-            <p class="text-neutral-300 mb-8" data-animate="fade-up" data-delay="0.12">Maandelijks opzegbaar.</p>
+            <h2 class="text-3xl font-semibold mb-2">Kies je plan</h2>
+            <p class="text-neutral-300 mb-6">Maandelijks opzegbaar. Geen setup — 1-pager (t.w.v. <span
+                    class="line-through">€600</span>) inbegrepen.</p>
 
-            <!-- Welkomstdeal -->
-            <section id="value" class="mb-10 bg-neutral-900 rounded-xl border border-yellow-400/60 p-5 text-left">
-                <p class="text-yellow-400 font-semibold">Lancering – Waardepakket</p>
+            <!-- Waarde-anker: 1-pager inbegrepen -->
 
-                <!-- Waarde-anker: 1-pager inbegrepen (t.w.v. €600) -->
-                <div class="mt-2 flex justify-center">
+
+            <div class="grid md:grid-cols-2 gap-8 text-black" data-animate="stagger">
+                <!-- basis -->
+                <div
+                    class="bg-white rounded-xl p-6 text-center flex flex-col hover:-translate-y-1 hover:shadow-2xl will-change-transform">
+                    <h3 class="text-xl font-bold mb-1">basis</h3>
+                    <p class="text-3xl font-extrabold mb-1">
+                        <span class="price">€495</span><span class="text-base font-semibold">/4 weken</span>
+                    </p>
+                    <p class="text-sm text-neutral-600 mb-2">+ €65 per <em>geldige</em> lead</p>
+
+
+                    <div class="unit-chip inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4"
+                        data-reels="4"></div>
+
+                    <ul class="text-sm text-neutral-700 space-y-2 mb-6 text-left">
+                        <li>4 Reels per maand</li>
+                        <li>Upload op Instagram & TikTok</li>
+                        <li>Caption-templates + hashtag-set</li>
+                        <li>Elke 4 weken een check-in (15 min)</li>
+                        <li>Live in 72u </li>
+                        <li>Hosting op <span class="font-medium">subdomein</span> (bijv. <span
+                                class="italic">rijschoolnaam.shinfilmt.nl</span>)</li>
+                    </ul>
+
+                    <a href="#boek-nieuw" rel="noopener"
+                        class="focus-ring mt-auto bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full hover:ring-2 hover:ring-yellow-300">
+                        Plan kennismaking
+                    </a>
+                </div>
+
+                <!-- Growth+ -->
+                <div
+                    class="bg-white rounded-xl p-6 text-center border-2 border-yellow-400 flex flex-col relative hover:-translate-y-1 hover:shadow-2xl will-change-transform">
                     <div
-                        class="inline-flex items-center gap-2 bg-neutral-900/60 backdrop-blur rounded-full border border-neutral-700 px-3 py-1">
-                        <span class="text-[11px] text-neutral-300">Converterende 1-pager</span>
-                        <span class="text-[11px] text-neutral-400 line-through">€600</span>
-                        <span class="text-[11px] text-white font-semibold">inbegrepen</span>
-                    </div>
-                </div>
-
-                <div class="mt-3 grid sm:grid-cols-2 gap-3 text-neutral-200">
-                    <div class="bg-black/40 border border-neutral-700 rounded-lg p-4">
-                        <p class="font-semibold mb-2">Wat ik voor je bouw</p>
-                        <ul class="text-sm text-neutral-300 list-disc ml-4 space-y-1">
-                            <li><span class="text-white font-medium">Professionele shortform video’s</span> die jouw
-                                rijschool laten
-                                opvallen.</li>
-                            
-                            <li><span class="text-white font-medium">Binnen 72 uur live</span> — klaar om te posten en
-                                te delen.
-                            </li>
-                            <li><span class="text-white font-medium">Alles kant-en-klaar</span>: jij kiest je tijdslot,
-                                ik regel de
-                                rest.</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-black/40 border border-neutral-700 rounded-lg p-4">
-                        <p class="font-semibold mb-2">Bonussen (tijdelijk)</p>
-                        <ul class="text-sm text-neutral-300 list-disc ml-4 space-y-1">
-                            <li>✔ 10× Hook-script pack voor rijscholen</li>
-                            <li>✔ Basis-caption-template voor Instagram & TikTok</li>
-                            <li>✔ Converterende 1-pager + Cal-flow
-                                <span class="text-[11px] text-neutral-400">(t.w.v. <span
-                                        class="line-through">€600</span> inbegrepen)</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="mt-4 bg-black border border-neutral-700 rounded-lg p-4">
-                    <p class="text-neutral-300">
-                        <span class="text-white font-semibold">Geen setupkosten</span> — de 1-pager (t.w.v. <span
-                            class="line-through">€600</span>) is nu inbegrepen.
+                        class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
+                        Meest gekozen</div>
+                    <h3 class="text-xl font-bold mb-1">Growth+</h3>
+                    <p class="text-3xl font-extrabold mb-1">
+                        <span class="price">€799</span><span class="text-base font-semibold">/4 Weken</span>
                     </p>
-                    <p class="text-neutral-300">
-                        Maandplan vanaf <span class="text-white font-semibold">€495/mnd</span>, maandelijks opzegbaar.
-                    </p>
+                    <p class="text-sm text-neutral-600 mb-2">+ €55 per <em>geldige</em> lead</p>
+
+
+                    <div class="unit-chip inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4"
+                        data-reels="8"></div>
+
+                    <ul class="text-sm text-neutral-700 space-y-2 mb-6 text-left">
+                        <li>8 Reels per maand</li>
+                        <li>Upload op IG, TikTok & YouTube Shorts</li>
+                        <li>Elke 4 weken een ideatiesessie (30 min)</li>
+                        <li>Varianten per video (vertical + square)</li>
+                        <li><span class="font-medium">Eigen domein mogelijk</span></li>
+                        <li>Live in 72u </li>
+                    </ul>
+
+                    <a href="#boek-nieuw" rel="noopener"
+                        class="focus-ring mt-auto bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full hover:ring-2 hover:ring-yellow-300">
+                        Plan een intake
+                    </a>
                 </div>
-
-                <div class="mt-3 p-4 rounded bg-neutral-950 border border-blue-600/40">
-                    <p class="text-blue-400 font-semibold">Pilot zonder risico</p>
-                    <p class="text-sm text-neutral-300 mt-1">
-                        De eerste maand kun je zonder verplichting testen. Bevalt het niet?
-                        <span class="text-white font-medium">Stoppen kan direct</span>, zonder verborgen kosten.
-                    </p>
-                </div>
-            </section>
-
-
-
-
-            <section id="prijzen-nieuw" class="py-24 px-6 bg-black border-t border-neutral-800">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl font-semibold mb-2">Kies je plan</h2>
-                    <p class="text-neutral-300 mb-6">Maandelijks opzegbaar. Geen setup — 1-pager (t.w.v. <span
-                            class="line-through">€600</span>) inbegrepen.</p>
-
-                    <!-- Waarde-anker: 1-pager inbegrepen -->
-                    <div class="max-w-2xl mx-auto text-center mb-8">
-                        <div
-                            class="inline-flex items-center gap-3 bg-neutral-900/60 border border-neutral-700 rounded-full px-4 py-2">
-                            <span class="text-xs text-neutral-300">Converterende 1-pager</span>
-                            <span class="text-xs text-neutral-400 line-through">€600</span>
-                            <span class="text-xs text-white font-semibold">inbegrepen bij elk pakket</span>
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-8 text-black" data-animate="stagger">
-                        <!-- Core -->
-                        <div
-                            class="bg-white rounded-xl p-6 text-center flex flex-col hover:-translate-y-1 hover:shadow-2xl will-change-transform">
-                            <h3 class="text-xl font-bold mb-1">Core</h3>
-                            <p class="text-3xl font-extrabold mb-1"><span class="price">€495</span><span
-                                    class="text-base font-semibold">/mnd</span></p>
-                            <p class="text-xs text-neutral-500 mb-4">Maandelijks opzegbaar · 1-pager inbegrepen</p>
-
-                            <div class="unit-chip inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4"
-                                data-reels="4"></div>
-
-                            <ul class="text-sm text-neutral-700 space-y-2 mb-6 text-left">
-                                <li>4 Reels per maand</li>
-                                <li>Upload op Instagram & TikTok</li>
-                                <li>Caption-templates + hashtag-set</li>
-                                <li>Maandelijkse check-in (15 min)</li>
-                                <li>SLA: live ≤ 72u · revisies 7 dagen</li>
-                                <li>Hosting op <span class="font-medium">subdomein</span> (bijv. <span
-                                        class="italic">rijschoolnaam.shinfilmt.nl</span>)</li>
-                            </ul>
-
-                            <a href="#boek-nieuw" rel="noopener"
-                                class="focus-ring mt-auto bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full hover:ring-2 hover:ring-yellow-300">
-                                Plan kennismaking
-                            </a>
-                        </div>
-
-                        <!-- Growth+ -->
-                        <div
-                            class="bg-white rounded-xl p-6 text-center border-2 border-yellow-400 flex flex-col relative hover:-translate-y-1 hover:shadow-2xl will-change-transform">
-                            <div
-                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
-                                Meest gekozen</div>
-                            <h3 class="text-xl font-bold mb-1">Growth+</h3>
-                            <p class="text-3xl font-extrabold mb-1"><span class="price">€799</span><span
-                                    class="text-base font-semibold">/mnd</span></p>
-                            <p class="text-xs text-neutral-500 mb-4">Maandelijks opzegbaar · 1-pager inbegrepen</p>
-
-                            <div class="unit-chip inline-block text-xs px-2 py-1 rounded bg-neutral-100 text-neutral-700 mb-4"
-                                data-reels="8"></div>
-
-                            <ul class="text-sm text-neutral-700 space-y-2 mb-6 text-left">
-                                <li>8 Reels per maand</li>
-                                <li>Upload op IG, TikTok & YouTube Shorts</li>
-                                <li>Maandelijkse ideatiesessie (30 min)</li>
-                                <li>Varianten per video (vertical + square)</li>
-                                <li><span class="font-medium">Eigen domein mogelijk</span></li>
-                                <li>SLA: live ≤ 72u · revisies 7 dagen</li>
-                            </ul>
-
-                            <a href="#boek-nieuw" rel="noopener"
-                                class="focus-ring mt-auto bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full hover:ring-2 hover:ring-yellow-300">
-                                Kies Growth+
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Voetnoten -->
-                    <p class="text-neutral-400 text-xs mt-4">1 uur filmen → 4 of 8 maandelijkse posts. Live binnen <span
-                            class="text-white font-medium">72 uur</span>.</p>
-                    <p class="text-neutral-400 text-xs mt-1">Eigen domein: klant regelt/bezit het domein; ik doe de
-                        DNS-koppeling en
-                        SSL via host.</p>
-                </div>
-
-
-            </section>
-
-
-
-            <!-- €/Reel chips berekenen op basis van prijs + data-reels -->
-
-
-    <!-- ROI Quick Calc -->
-    <div id="roi" class="mt-10 max-w-2xl mx-auto bg-neutral-900 p-5 rounded-lg border border-neutral-700 text-left">
-        <h3 class="text-xl font-semibold mb-3">Verdienmodel-calculator</h3>
-        <div class="grid sm:grid-cols-3 gap-4">
-            <label class="block text-sm">
-                <span class="text-neutral-300">Marge per les (€)</span>
-                <input id="roi-marge" type="number" value="40"
-                    class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
-            </label>
-            <label class="block text-sm">
-                <span class="text-neutral-300">Lessen per leerling</span>
-                <input id="roi-lessen" type="number" value="35"
-                    class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
-            </label>
-            <label class="block text-sm">
-                <span class="text-neutral-300">Leads/maand</span>
-                <input id="roi-leads" type="number" value="10"
-                    class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
-            </label>
+            </div>
         </div>
-        <p class="text-sm text-neutral-400 mt-3">Ik reken 1 geboekte proefles = 1 lead. Dubbelen/no-shows niet
-            billable.</p>
-        <div class="mt-4 p-4 rounded bg-black border border-neutral-700">
-            <p class="text-neutral-300">Waarde per leerling: <span id="roi-per"
-                    class="text-yellow-400 font-bold">€0</span></p>
-            <p class="text-neutral-300">Geschatte maandwaarde: <span id="roi-maand"
-                    class="text-yellow-400 font-bold">€0</span></p>
-            <p class="text-neutral-400 text-sm mt-1">= (<span id="roi-per-mini">€0</span> × <span
-                    id="roi-leads-mini">0</span>)</p>
-        </div>
-        <p id="roi-break" class="mt-3 text-green-400 font-semibold"></p>
-    </div>
-
-    <p class="text-neutral-400 text-sm mt-8 max-w-2xl mx-auto" data-animate="fade-up" data-delay="0.12">
-        Resultaten verschillen per regio en doelgroep. Het principe is simpel:
-        <span class="text-white font-medium">meer relevante content → meer bereik → meer
-            proefles-aanvragen</span>.
-    </p>
-    </div>
     </section>
+
+
+
+    <!-- €/Reel chips berekenen op basis van prijs + data-reels -->
+    <section id="calc" class="py-24 px-6 bg-black border-t border-neutral-800">
+        <div class="max-w-2xl mx-auto w-full">
+            <!-- ROI Quick Calc -->
+            <div id="roi" class="mt-10 bg-neutral-900 p-5 rounded-lg border border-neutral-700 text-left">
+                <h3 class="text-xl font-semibold mb-3">Verdienmodel-calculator</h3>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <label class="block text-sm">
+                        <span class="text-neutral-300">Marge per les (€)</span>
+                        <input id="roi-marge" type="number" value="40"
+                            class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-neutral-300">Lessen per leerling</span>
+                        <input id="roi-lessen" type="number" value="35"
+                            class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
+                    </label>
+                    <label class="block text-sm">
+                        <span class="text-neutral-300">Leads/Maand</span>
+                        <input id="roi-leads" type="number" value="10"
+                            class="focus-ring w-full mt-1 p-2 rounded bg-black border border-neutral-700 text-white">
+                    </label>
+                </div>
+
+                <p class="text-sm text-neutral-400 mt-3">
+                    Ik reken 1 geboekte proefles = 1 lead. Dubbelen/no-shows niet billable.
+                </p>
+
+                <div class="mt-4 p-4 rounded bg-black border border-neutral-700">
+                    <p class="text-neutral-300">Waarde per leerling:
+                        <span id="roi-per" class="text-yellow-400 font-bold">€0</span>
+                    </p>
+                    <p class="text-neutral-300">Geschatte waarde per 4 weken:
+                        <span id="roi-maand" class="text-yellow-400 font-bold">€0</span>
+                    </p>
+                    <p class="text-neutral-400 text-sm mt-1">= (<span id="roi-per-mini">€0</span> ×
+                        <span id="roi-leads-mini">0</span>)
+                    </p>
+                </div>
+
+                <p id="roi-break" class="mt-3 text-green-400 font-semibold"></p>
+            </div>
+
+            <p class="text-neutral-400 text-sm mt-8 max-w-2xl text-center mx-auto" data-animate="fade-up"
+                data-delay="0.12">
+                Resultaten verschillen per regio en doelgroep. Het principe is simpel:
+                <span class="text-white font-medium">meer relevante content → meer bereik → meer
+                    proefles-aanvragen</span>.
+            </p>
+        </div>
+    </section>
+
 
 
 
@@ -591,8 +527,8 @@
     <section id="boek-nieuw" class="bg-[#0F0F0F] text-white py-24 px-6 border-t border-neutral-700">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-bold mb-6 text-center">Plan direct je kennismaking</h2>
-            <iframe src="https://cal.com/shinfilmt?layout=month_view"
-                class="w-full h-[720px] rounded-2xl ></iframe>
+            <iframe src="https://cal.com/shinfilmt?layout=month_view" class="w-full h-[720px] rounded-2xl"></iframe>
+
 
         </div>
     </section>
@@ -618,8 +554,16 @@
                     vcEl.textContent = val.toLocaleString('nl-NL');
                     if (p < 1) requestAnimationFrame(step);
                 }
+                 if (!window.gsap) return;
+                gsap.to('.u-underline', {
+                    backgroundSize: '100% 2px',
+                    duration: 0.8,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: '.u-underline', start: 'top 85%' }
+                });
                 requestAnimationFrame(step);
             }
+         
 
             // ROI calc
             function roiUpdate() {
